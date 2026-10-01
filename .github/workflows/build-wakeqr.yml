@@ -1,0 +1,39 @@
+name: Build WakeQR for Windows
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Extract source
+        shell: pwsh
+        run: Expand-Archive downloads/WakeQR-v1.0.1-source.zip build-src
+
+      - name: Publish self-contained executable
+        shell: pwsh
+        run: >-
+          dotnet publish build-src/WakeQR.csproj
+          -c Release
+          -r win-x64
+          --self-contained true
+          -p:PublishSingleFile=true
+          -p:PublishReadyToRun=false
+          -o publish
+
+      - name: Package
+        shell: pwsh
+        run: Compress-Archive publish/WakeQR.exe WakeQR-v1.0.1-windows-x64.zip
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: WakeQR-v1.0.1-windows-x64
+          path: WakeQR-v1.0.1-windows-x64.zip
+          if-no-files-found: error
