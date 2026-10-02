@@ -84,12 +84,12 @@
         <div>
           <div class="eyebrow">WAKE ON LAN FOR WINDOWS</div>
           <h1>PC 정보는 QR로.<br><span>깨우기는 한 번에.</span></h1>
-          <p class="lead">WakeQR가 Windows PC의 네트워크 정보를 찾아 QR 코드로 만듭니다. 휴대폰의 WakeMyPC로 스캔하면 등록이 끝납니다.</p>
+          <p class="lead">WakeQR가 PC와 공유기를 자동 설정하고 로컬·외부 깨우기 정보를 하나의 QR로 만듭니다. 자동 설정이 안 되는 공유기는 필요한 값을 바로 안내합니다.</p>
           <div class="actions">
-            <a class="button primary" href="downloads/WakeQR-v1.0.1-windows-x64.zip" download>Windows 실행 파일 다운로드</a>
+            <a class="button primary" href="downloads/WakeQR-v1.1.0-windows-x64.zip" download>Windows 실행 파일 다운로드</a>
             <a class="button secondary" href="#install">실행 방법 보기</a>
           </div>
-          <div class="meta">v1.0.1 · Windows 10/11 x64 · .NET 설치 불필요 · 서버 전송 없음</div>
+          <div class="meta">v1.1.0 · Windows 10/11 x64 · UPnP/NAT-PMP 자동 설정 · .NET 설치 불필요</div>
         </div>
         <div class="utility" aria-label="WakeQR 프로그램 화면 미리보기">
           <div class="window-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="window-title">WakeQR · 내 PC</span></div>
@@ -100,7 +100,7 @@
               <div><div class="label">IPv4</div><div class="value">192.168.0.24</div></div>
               <div><div class="label">브로드캐스트</div><div class="value">192.168.0.255</div></div>
             </div>
-            <div class="qr"><div class="qr-grid" aria-hidden="true"></div><div><strong>휴대폰에서 스캔</strong><p>PC 이름, MAC 주소, 브로드캐스트 주소와 포트만 QR에 포함됩니다.</p></div></div>
+            <div class="qr"><div class="qr-grid" aria-hidden="true"></div><div><strong>QR 한 번으로 등록</strong><p>PC 정보와 설정된 외부 주소가 함께 등록됩니다. 공유기 비밀번호는 포함되지 않습니다.</p></div></div>
           </div>
         </div>
       </div>
@@ -108,20 +108,21 @@
 
     <section class="light" id="install">
       <div class="wrap">
-        <div class="section-head"><h2>세 단계면 준비가<br>끝납니다.</h2><p>처음 한 번만 PC의 WOL 설정과 BIOS 설정을 확인하세요. 이후에는 휴대폰에서 깨우기 버튼만 누르면 됩니다.</p></div>
+        <div class="section-head"><h2>세 단계면 준비가<br>끝납니다.</h2><p>처음 한 번만 Windows와 공유기를 준비하면 같은 Wi-Fi가 아니어도 휴대폰에서 PC를 깨울 수 있습니다.</p></div>
         <div class="steps">
-          <article class="step"><span class="num">01 · WINDOWS</span><h3>WakeQR 실행</h3><p>Windows 실행 파일 ZIP을 내려받아 압축을 풀고 WakeQR.exe를 실행합니다. 별도 빌드나 .NET 설치가 필요하지 않습니다.</p></article>
-          <article class="step"><span class="num">02 · QR SCAN</span><h3>PC 등록</h3><p>WakeQR에 표시된 QR 코드를 WakeMyPC 앱의 ‘QR 스캔’으로 읽습니다. 네트워크 정보가 자동으로 채워집니다.</p></article>
-          <article class="step"><span class="num">03 · WAKE</span><h3>휴대폰에서 깨우기</h3><p>PC를 종료한 뒤 휴대폰과 PC를 같은 네트워크에 연결하고 ‘깨우기’를 누릅니다.</p></article>
+          <article class="step"><span class="num">01 · WINDOWS</span><h3>PC WOL 설정</h3><p>WakeQR를 실행하고 ‘Windows WOL 설정’을 누릅니다. BIOS/UEFI의 Wake on LAN은 PC 제조사 설정에서 한 번 확인하세요.</p></article>
+          <article class="step"><span class="num">02 · ROUTER + QR</span><h3>공유기 자동 설정</h3><p>‘공유기 자동 설정 + 통합 QR’을 누릅니다. 성공하면 외부 깨우기까지 QR 하나에 담기며, 미지원 공유기는 수동 설정값을 안내합니다.</p></article>
+          <article class="step"><span class="num">03 · SCAN & WAKE</span><h3>QR 한 번 스캔</h3><p>WakeMyPC 앱에서 QR을 한 번 읽으면 등록이 끝납니다. 이후 Wi-Fi나 셀룰러 어디서든 깨우기 버튼을 누르세요.</p></article>
         </div>
 
         <div class="requirements">
-          <div><h2>실행 전 확인</h2><div class="security">QR 정보는 서버로 전송하지 않습니다. WakeMyPC와 WakeQR는 로컬 네트워크 안에서만 동작합니다.</div></div>
+          <div><h2>실행 전 확인</h2><div class="security">WakeQR는 공유기 비밀번호를 요구하거나 저장하지 않습니다. 자동 설정은 공유기가 제공하는 UPnP/NAT-PMP 기능만 사용합니다.</div></div>
           <ul class="checklist">
             <li><span class="check">✓</span><span>Windows 10 또는 Windows 11, 64비트 PC</span></li>
             <li><span class="check">✓</span><span>BIOS/UEFI에서 Wake on LAN 또는 PCIe Wake 활성화</span></li>
             <li><span class="check">✓</span><span>가능하면 Wi-Fi 대신 유선 LAN 사용</span></li>
-            <li><span class="check">✓</span><span>휴대폰과 PC가 같은 공유기·서브넷에 연결</span></li>
+            <li><span class="check">✓</span><span>등록할 때 PC가 공유기에 연결되어 있고 공유기의 UPnP/NAT-PMP가 활성화</span></li>
+            <li><span class="check">✓</span><span>자동 설정이 안 되면 WakeQR가 보여주는 IP·MAC·포트 값을 공유기에 한 번 입력</span></li>
           </ul>
         </div>
       </div>
@@ -129,8 +130,8 @@
 
     <section class="build">
       <div class="wrap build-grid">
-        <div><div class="eyebrow">RUN ON WINDOWS</div><h2>다운로드한 파일<br>실행 방법</h2><p>ZIP 압축을 푼 뒤 WakeQR.exe를 실행하세요. 앱 자체는 관리자 권한이 필요하지 않으며, ‘WOL 설정 자동 적용’을 누를 때만 Windows가 관리자 권한을 요청합니다.</p></div>
-        <pre><code>1. WakeQR-v1.0.1-windows-x64.zip 다운로드
+        <div><div class="eyebrow">RUN ON WINDOWS</div><h2>다운로드한 파일<br>실행 방법</h2><p>ZIP 압축을 푼 뒤 WakeQR.exe를 실행하세요. 앱 자체는 관리자 권한이 필요하지 않으며, ‘Windows WOL 설정’을 누를 때만 관리자 권한을 요청합니다.</p></div>
+        <pre><code>1. WakeQR-v1.1.0-windows-x64.zip 다운로드
 2. ZIP 파일 우클릭 → 모두 압축 풀기
 3. WakeQR.exe 실행
 
@@ -142,6 +143,6 @@ SmartScreen이 표시되면
     </section>
   </main>
 
-  <footer><div class="wrap"><span>WakeQR · WakeMyPC companion for Windows</span><span>로컬 네트워크 전용</span></div></footer>
+  <footer><div class="wrap"><span>WakeQR · WakeMyPC companion for Windows</span><span>로컬·외부 Wake on LAN</span></div></footer>
 </body>
 </html>
