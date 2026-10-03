@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="WakeMyPC용 Windows 도구 WakeQR 다운로드 및 설치 안내">
+  <meta name="description" content="WakeMyPC용 Windows·macOS 도구 WakeQR 다운로드 및 설치 안내">
   <meta name="theme-color" content="#07111f">
   <title>WakeQR — Windows PC를 휴대폰으로 깨우세요</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%2307111f'/%3E%3Cpath d='M35 8 17 35h13l-2 21 19-29H34z' fill='%233b82f6'/%3E%3C/svg%3E">
@@ -86,10 +86,11 @@
           <h1>PC 정보는 QR로.<br><span>깨우기는 한 번에.</span></h1>
           <p class="lead">WakeQR가 PC와 공유기를 자동 설정하고 로컬·외부 깨우기 정보를 하나의 QR로 만듭니다. 자동 설정이 안 되는 공유기는 필요한 값을 바로 안내합니다.</p>
           <div class="actions">
-            <a class="button primary" href="downloads/WakeQR-v1.1.1-windows-x64.zip" download>Windows 실행 파일 다운로드</a>
+            <a class="button primary" href="downloads/WakeQR-v1.1.1-windows-x64.zip" download>Windows 다운로드</a>
+            <a class="button primary" href="downloads/WakeQR-v1.0.0-macos-arm64.zip" download>Mac 다운로드</a>
             <a class="button secondary" href="#install">실행 방법 보기</a>
           </div>
-          <div class="meta">v1.1.1 · Windows 10/11 x64 · UPnP/NAT-PMP 자동 설정 · .NET 설치 불필요</div>
+          <div class="meta">Windows 10/11 x64 · macOS 13+ Apple silicon · UPnP 자동 설정 · 별도 런타임 불필요</div>
         </div>
         <div class="utility" aria-label="WakeQR 프로그램 화면 미리보기">
           <div class="window-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="window-title">WakeQR · 내 PC</span></div>
@@ -110,7 +111,7 @@
       <div class="wrap">
         <div class="section-head"><h2>세 단계면 준비가<br>끝납니다.</h2><p>처음 한 번만 Windows와 공유기를 준비하면 같은 Wi-Fi가 아니어도 휴대폰에서 PC를 깨울 수 있습니다.</p></div>
         <div class="steps">
-          <article class="step"><span class="num">01 · WINDOWS</span><h3>PC WOL 설정</h3><p>WakeQR를 실행하고 ‘Windows WOL 설정’을 누릅니다. BIOS/UEFI의 Wake on LAN은 PC 제조사 설정에서 한 번 확인하세요.</p></article>
+          <article class="step"><span class="num">01 · COMPUTER</span><h3>깨우기 설정</h3><p>Windows는 ‘Windows WOL 설정’을 누르고 BIOS/UEFI를 확인합니다. Mac은 ‘네트워크 깨우기 켜기’를 누르고 종료 대신 잠자기를 사용하세요.</p></article>
           <article class="step"><span class="num">02 · ROUTER + QR</span><h3>공유기 자동 설정</h3><p>‘공유기 자동 설정 + 통합 QR’을 누릅니다. 성공하면 외부 깨우기까지 QR 하나에 담기며, 미지원 공유기는 앱에서 관리자 화면과 정확한 수동 설정값을 안내합니다.</p></article>
           <article class="step"><span class="num">03 · SCAN & WAKE</span><h3>QR 한 번 스캔</h3><p>WakeMyPC 앱에서 QR을 한 번 읽으면 등록이 끝납니다. 이후 Wi-Fi나 셀룰러 어디서든 깨우기 버튼을 누르세요.</p></article>
         </div>
@@ -118,7 +119,7 @@
         <div class="requirements">
           <div><h2>실행 전 확인</h2><div class="security">WakeQR는 공유기 비밀번호를 요구하거나 저장하지 않습니다. 자동 설정은 공유기가 제공하는 UPnP/NAT-PMP 기능만 사용합니다.</div></div>
           <ul class="checklist">
-            <li><span class="check">✓</span><span>Windows 10 또는 Windows 11, 64비트 PC</span></li>
+            <li><span class="check">✓</span><span>Windows 10/11 64비트 또는 Apple silicon Mac의 macOS 13 이상</span></li>
             <li><span class="check">✓</span><span>BIOS/UEFI에서 Wake on LAN 또는 PCIe Wake 활성화</span></li>
             <li><span class="check">✓</span><span>가능하면 Wi-Fi 대신 유선 LAN 사용</span></li>
             <li><span class="check">✓</span><span>등록할 때 PC가 공유기에 연결되어 있고 공유기의 UPnP/NAT-PMP가 활성화</span></li>
@@ -130,8 +131,9 @@
 
     <section class="build">
       <div class="wrap build-grid">
-        <div><div class="eyebrow">RUN ON WINDOWS</div><h2>다운로드한 파일<br>실행 방법</h2><p>ZIP 압축을 푼 뒤 WakeQR.exe를 실행하세요. 앱 자체는 관리자 권한이 필요하지 않으며, ‘Windows WOL 설정’을 누를 때만 관리자 권한을 요청합니다.</p></div>
-        <pre><code>1. WakeQR-v1.1.1-windows-x64.zip 다운로드
+        <div><div class="eyebrow">RUN ON WINDOWS &amp; MAC</div><h2>다운로드한 파일<br>실행 방법</h2><p>운영체제에 맞는 ZIP을 받아 실행하세요. Windows는 WOL 설정 시, Mac은 네트워크 깨우기 설정 시에만 관리자 권한을 요청합니다.</p></div>
+        <div><pre><code>Windows
+1. WakeQR-v1.1.1-windows-x64.zip 다운로드
 2. ZIP 파일 우클릭 → 모두 압축 풀기
 3. WakeQR.exe 실행
 
@@ -139,10 +141,16 @@ SmartScreen이 표시되면
 “추가 정보” → “실행”을 선택하세요.
 
 오류 기록: %LocalAppData%\WakeQR\WakeQR.log</code></pre>
+        <pre style="margin-top:14px"><code>Mac
+1. WakeQR-v1.0.0-macos-arm64.zip 다운로드
+2. 압축을 풀고 “WakeQR for Mac” 실행
+3. 차단되면 앱을 우클릭 → 열기 → 열기
+
+MacBook은 종료하지 말고 잠자기로 두세요.</code></pre></div>
       </div>
     </section>
   </main>
 
-  <footer><div class="wrap"><span>WakeQR · WakeMyPC companion for Windows</span><span>로컬·외부 Wake on LAN</span></div></footer>
+  <footer><div class="wrap"><span>WakeQR · WakeMyPC companion for Windows &amp; Mac</span><span>로컬·외부 Wake on LAN</span></div></footer>
 </body>
 </html>
