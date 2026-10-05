@@ -82,12 +82,13 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div>
-          <div class="eyebrow">WAKE ON LAN FOR WINDOWS</div>
+          <div class="eyebrow">WAKE ON LAN FOR WINDOWS &amp; MAC</div>
           <h1>PC 정보는 QR로.<br><span>깨우기는 한 번에.</span></h1>
           <p class="lead">WakeQR가 PC와 공유기를 자동 설정하고 로컬·외부 깨우기 정보를 하나의 QR로 만듭니다. 자동 설정이 안 되는 공유기는 필요한 값을 바로 안내합니다.</p>
           <div class="actions">
             <a class="button primary" href="downloads/WakeQR-v1.1.1-windows-x64.zip" download>Windows 다운로드</a>
-            <a class="button primary" href="downloads/WakeQR-v1.0.0-macos-arm64.zip" download>Mac 다운로드</a>
+            <a class="button primary" href="downloads/WakeQR-v1.0.0-macos-arm64.dmg" download>Mac DMG 다운로드</a>
+            <a class="button secondary" href="downloads/WakeQR-v1.0.0-macos-arm64.zip" download>Mac ZIP</a>
             <a class="button secondary" href="#install">실행 방법 보기</a>
           </div>
           <div class="meta">Windows 10/11 x64 · macOS 13+ Apple silicon · UPnP 자동 설정 · 별도 런타임 불필요</div>
@@ -131,7 +132,7 @@
 
     <section class="build">
       <div class="wrap build-grid">
-        <div><div class="eyebrow">RUN ON WINDOWS &amp; MAC</div><h2>다운로드한 파일<br>실행 방법</h2><p>운영체제에 맞는 ZIP을 받아 실행하세요. Windows는 WOL 설정 시, Mac은 네트워크 깨우기 설정 시에만 관리자 권한을 요청합니다.</p></div>
+        <div><div class="eyebrow">RUN ON WINDOWS &amp; MAC</div><h2>다운로드한 파일<br>실행 방법</h2><p>운영체제에 맞는 설치 파일을 받아 실행하세요. Windows는 WOL 설정 시, Mac은 네트워크 깨우기 설정 시에만 관리자 권한을 요청합니다.</p></div>
         <div><pre><code>Windows
 1. WakeQR-v1.1.1-windows-x64.zip 다운로드
 2. ZIP 파일 우클릭 → 모두 압축 풀기
@@ -142,9 +143,12 @@ SmartScreen이 표시되면
 
 오류 기록: %LocalAppData%\WakeQR\WakeQR.log</code></pre>
         <pre style="margin-top:14px"><code>Mac
-1. WakeQR-v1.0.0-macos-arm64.zip 다운로드
-2. 압축을 풀고 “WakeQR for Mac” 실행
-3. 차단되면 앱을 우클릭 → 열기 → 열기
+1. WakeQR-v1.0.0-macos-arm64.dmg 다운로드
+2. DMG를 열고 WakeQR for Mac을 Applications로 드래그
+3. Applications에서 WakeQR for Mac 실행
+4. 차단되면 앱을 우클릭 → 열기 → 열기
+
+ZIP도 제공: 압축을 풀고 앱을 실행하세요.
 
 MacBook은 종료하지 말고 잠자기로 두세요.</code></pre></div>
       </div>
