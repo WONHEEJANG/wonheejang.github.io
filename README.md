@@ -1,8 +1,9 @@
-# WakeQR Download
+# Wonhee Jang · 개발자 포트폴리오
 
-WakeMyPC용 Windows 도구 WakeQR의 공식 다운로드 페이지입니다.
+공개한 iOS 앱과 웹앱의 기능 및 실제 화면을 소개합니다. 저장소의 main 브랜치 루트를 GitHub Pages에서 제공합니다.
 
-- 사이트: https://wonheejang.github.io/
-- 다운로드 파일: `downloads/WakeQR-v1.0.0-source.zip`
+https://wonheejang.github.io/
 
-이 저장소의 `main` 브랜치 루트가 GitHub Pages로 배포됩니다.
+프로젝트 설명, 링크, 화면 캡션은 `scripts/catalog.mjs`에서 관리합니다. 내용을 바꾼 뒤 `node scripts/build.mjs`를 실행하면 홈과 프로젝트별 HTML이 갱신됩니다. 이미지 파일은 `media/`에 보관합니다.
+
+한글뷰 고객지원 및 개인정보처리방침은 `hangulview/`에서 제공합니다.
