@@ -65,34 +65,10 @@ export const websites = [
     screens:[['perla','주얼리 카탈로그'],['perla-detail','귀걸이 상세 화면']]
   },
   {
-    id:'cupid', name:'Wish Cupid', category:'팬 퀴즈', url:'https://wish-cupid.web.app/',
-    intro:'NCT WISH의 노래 가사에서 빈칸에 들어갈 단어를 고르는 팬 퀴즈입니다.',
-    features:[['오늘의 미션','가사와 선택지를 읽고 답을 제출하면 결과를 확인합니다. 오답일 때는 남은 기회 안에서 다시 도전합니다.'],['계정으로 시작','이메일 주소로 가입하고 로그인합니다. 비밀번호를 잊었을 때는 첫 화면에서 재설정할 수 있습니다.']],
-    screens:[['cupid','로그인'],['cupid-detail','회원가입']]
-  },
-  {
-    id:'sillok', name:'조선왕조실록', category:'역사', url:'https://new-sillok.web.app/',
-    intro:'태조실록과 정종실록을 왕과 재위 연도별로 찾아 읽는 웹 열람기입니다.',
-    features:[['왕별 실록 목록','태조실록과 정종실록 중 하나를 선택해 해당 왕의 기록으로 들어갑니다.'],['연도별 열람','총서와 재위 연도별 목록에서 읽고 싶은 시기를 선택한 뒤 기록을 펼쳐봅니다.']],
-    screens:[['sillok','왕조 목록'],['sillok-detail','태조실록 연도별 목록']]
-  },
-  {
-    id:'silokdang', name:'실록당', category:'읽기', url:'https://silokdang.web.app/',
-    intro:'조선왕조실록의 기록을 바탕으로 재구성한 역사 웹소설을 왕별로 찾아봅니다.',
-    features:[['왕별로 고르는 역사 이야기','투데이 화면에서 왕의 이름과 재위 기간을 살펴보고 읽고 싶은 실록을 고릅니다.'],['회차별 읽기','선택한 실록의 상세 화면에서 회차를 고르고 본문을 읽습니다.']],
-    screens:[['silokdang-detail','투데이와 왕별 작품 목록']]
-  },
-  {
     id:'vedic', name:'베다수학 연습장', category:'학습', url:'https://vedic-mathematics.vercel.app/',
     intro:'97 × 96처럼 암산하기 까다로운 곱셈을 작은 단계로 나눠 계산하는 방법을 익힙니다.',
     features:[['유형별 암산법','100에 가까운 수의 곱셈, 5로 끝나는 수의 제곱 등 계산 패턴을 예제로 살펴봅니다.'],['단계별 풀이와 연습','이전·다음 버튼으로 수가 어떻게 바뀌는지 확인한 뒤 연습 문제에 같은 방법을 적용합니다.']],
     screens:[['vedic-detail','100에 가까운 수의 곱셈 풀이'],['vedic','암산 유형 목록']]
-  },
-  {
-    id:'calc', name:'오늘의 계산 연습', category:'학습', url:'https://calc-training-rust.vercel.app/',
-    intro:'매일 바뀌는 기준 숫자로 곱셈과 나눗셈을 풀고 지난 연습 기록을 확인합니다.',
-    features:[['오늘의 기준 숫자','홈에 표시된 숫자로 연습을 시작합니다. 각 단계에서 숫자 키패드로 자릿수에 맞춰 답을 입력합니다.'],['연습 진행과 기록','풀이 화면에서 현재 단계와 경과 시간을 확인하고, 홈에서 지난 기록을 다시 열어봅니다.']],
-    screens:[['calc-detail','숫자 키패드로 계산 연습'],['calc','오늘의 기준 숫자']]
   },
   {
     id:'enz', name:'EN—Z', category:'음악 · 인터랙티브', url:'https://en-z.vercel.app/',
